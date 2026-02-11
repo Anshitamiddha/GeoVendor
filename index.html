@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoVendor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <!-- ✅ Your header is perfect -->
+        <div id="heading">
+            <div id="head1">
+                <div id="logo"></div>
+                <input id="input-loc" type="text" placeholder="📍 Enter Location"><i class="fa-regular fa-camera"></i>
+                <input id="input-item" type="text" placeholder="Search Grocery, Medical...">
+            </div>
+        </div>
+
+        <div id="body">
+            <h1>Find Local Vendors Near You!</h1>
+        </div>
+
+        <!-- ✅ Fixed your filter section -->
+        <div class="heading2">
+            <h2 id="dynamic-title">Nearby Grocery Stores</h2>
+            
+            <!-- Fixed IDs + data attributes -->
+            <select id="rating" data-filter="rating">
+                <option value="0">All Ratings</option>
+                <option value="4">4+ ⭐⭐⭐⭐</option>
+                <option value="3">3+ ⭐⭐⭐</option>
+                <option value="2">2+ ⭐⭐</option>
+            </select>
+
+            <select id="sort" data-filter="sort">
+                <option value="rating">Best Rated</option>
+                <option value="distance">Nearest First</option>
+                <option value="relevance">Relevance</option>
+            </select>
+
+            <select id="categorySelect" data-filter="category">
+                <option value="all">All Categories</option>
+                <option value="Grocery">Grocery</option>
+                <option value="Medical">Medical</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Stationery">Stationery</option>
+            </select>
+
+            <button id="topRatedBtn">🥇 Top Rated</button>
+            <button id="dealsBtn">💰 Deals</button>
+        </div>
+
+        <!-- ✅ Clear container for dynamic content -->
+        <div id="vandor-list">
+            <!-- JS will populate this -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
